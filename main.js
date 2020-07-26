@@ -9,6 +9,7 @@ const select = document.getElementById('dropdown');
 function showError(input, message){
 const formControl = input.parentElement;
 formControl.className ='form-control error';
+
 //use formControl to target all the children element with small tag
 const small = formControl.querySelector('small');
 small.innerText = message;
@@ -23,37 +24,71 @@ formControl.className ='form-control success';
 
 //Event Listener
 form.addEventListener('submit', function(e){
-   e.preventDefault(); 
-   console.log('submit');
+//    e.preventDefault(); 
+//    console.log('submit');
    if(firstName.value === ''){
+    e.preventDefault();
        showError(firstName, 'Firstname is required')
    }else{
        showSuccess(firstName);
    }
 
    if(lastName.value === ''){
+    e.preventDefault();
     showError(lastName, 'Lastname is required')
 }else{
     showSuccess(lastName);
 }
 
-if( select === ''){
+if( select === '--Select--'){
+    e.preventDefault();
  showError(select,'Please select one category');
 }else{
     showSuccess(select);
 }
-})
+
+passedValue();
+// useRedirect();
+});
 
 // Passing selected text from dropdown into next Page
 const formBtn = document.getElementById('submit-btn');
 form.addEventListener('submit', passedValue);
 
+let selectedVal;
 function passedValue(){
-    const selectedVal =  document.getElementById('dropdown').value;
+     selectedVal =  document.getElementById('dropdown').value;
 
     console.log(selectedVal);
     localStorage.setItem('dropdownValue', selectedVal);
-    return true;
+
+   
     
 }
-//text inserted to the next page based on the chosen category
+
+formBtn.addEventListener('click', userRedirect)
+
+function userRedirect(e){
+    e.preventDefault();
+     const selectedValue =  document.getElementById('dropdown').value;
+     //selectedVal = document.getElementById('dropdown').value;
+    // console.log(selectedVal);
+
+    if(selectedValue === 'Technology'){
+        window.location.href ='index_tech.html'
+    }else{
+        window.location.href ='index_maths.html'
+    }
+      
+}
+userRedirect();
+ 
+// function useRedirect(){
+
+
+
+
+
+
+
+
