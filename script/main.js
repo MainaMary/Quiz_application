@@ -88,9 +88,9 @@ function passedValue(){
     console.log(selectedVal);
     localStorage.setItem('dropdownValue', selectedVal);
     if(selectedVal === 'technology'){
-        window.location.href ='index_tech.html'
+        window.location.href ='tech.html'
     }else{
-        window.location.href ='index_maths.html'
+        window.location.href ='maths.html'
     }
    
     
