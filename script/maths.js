@@ -6,50 +6,50 @@ console.log(localStorage.getItem('dropdownValue'));
 
 const techQuestions = [
     {
-        question: "Q1. Which variable declaration is function Scoped in JavaScript?",
+        question: "Q1. What is 100 divide by 20?",
         answers: {
-            A: 'Const',
-            B: 'Var',
-            C: 'Let'
-        },
-        correctAnswer: 'B'
-    },
-    {
-        question: "Q2. Which built-in method removes the last element from an array and returns that element?",
-        answers: {
-            A: 'last()',
-            B: 'get()',
-            C: 'pop()'
+            A: '10',
+            B: '50',
+            C: '5'
         },
         correctAnswer: 'C'
     },
     {
-        question: "Q3. Which of the following function of String object returns a string representing the specified object?",
+        question: "Q2.  'what is a right-angled rhombus called? ",
         answers: {
-            A: 'toLocaleString()',
-            B: 'toString()',
-            C: 'subString()'
-        },
-        correctAnswer: 'B'
-    },
-    {
-        question: "Q4. Who invented javaScript",
-        answers: {
-            A: 'Linux Kernel',
-            B: 'Brenden Eich',
-            C: 'Mark Zuckkerburg'
-        },
-        correctAnswer: 'B'
-    },
-    {
-        question: "Q5. Which one of these is not immutable built in types in python?",
-        answers: {
-            A: 'tuple',
-            B: 'dictionary',
-            C: 'list',
-            D: 'set'
+            A: 'Square',
+            B: 'Rectangle',
+            C: 'No idea'
         },
         correctAnswer: 'A'
+    },
+    {
+        question: "Q3. circles sharing the same centre are called?",
+        answers: {
+            A: 'Circumfrence',
+            B: 'Concetric',
+            C: 'ball'
+        },
+        correctAnswer: 'B'
+    },
+    {
+        question: "Q4. 'what kind of motion does a pendulum exhibit? ",
+        answers: {
+            A: 'relative',
+            B: 'rotational',
+            C: 'Simple harmonic'
+        },
+        correctAnswer: 'C'
+    },
+    {
+        question: "Q5.  A straight Line touching a circle is called ?",
+        answers: {
+            A: 'Cone',
+            B: 'Tangent',
+            C: 'Equidistant',
+            D: 'Point'
+        },
+        correctAnswer: 'B'
     }
 ];
 

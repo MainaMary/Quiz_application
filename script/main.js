@@ -22,10 +22,36 @@ const formControl = input.parentElement;
 formControl.className ='form-control success';
 }
 
+
+// form.addEventListener('submit', (e) =>{
+
+//     e.preventDefault();
+//     firstName.value == " " &&  showError(firstName, 'Firstname is required')
+//     firstName.value !== " " &&  showSuccess(firstName); 
+
+//     lastName.value == " " &&  showError(lastName, 'Firstname is required')
+//     lastName.value !== " " &&  showSuccess(lastName);
+
+//     select.value == "--Select--" &&  showError(select, 'Please Select One Category')
+//     select.value !== "--Select--" && showSuccess(select);
+
+//     firstName.value && lastName.value && select.value !== '--Select--' && passedValue();
+// })
+
+// function passedValue(){
+//          const selectedVal =  document.getElementById('dropdown').value;
+    
+//        console.log(selectedVal);
+//         localStorage.setItem('dropdownValue', selectedVal);
+//         if(selectedVal === 'technology') window.location = 'index_tech.html';
+//         if(selectedVal === 'Mathematics') window.location = 'index_maths.html'; 
+    
+//  }
+
 //Event Listener
 form.addEventListener('submit', function(e){
-//    e.preventDefault(); 
-//    console.log('submit');
+   e.preventDefault(); 
+   console.log('submit');
    if(firstName.value === ''){
     e.preventDefault();
        showError(firstName, 'Firstname is required')
@@ -40,50 +66,37 @@ form.addEventListener('submit', function(e){
     showSuccess(lastName);
 }
 
-if( select === '--Select--'){
+if( select.value === '--Select--'){
     e.preventDefault();
  showError(select,'Please select one category');
 }else{
     showSuccess(select);
 }
 
-passedValue();
-// useRedirect();
+firstName.value && lastName.value && select.value !== '--Select--' && passedValue();
+// passedValue();
+
 });
 
-// Passing selected text from dropdown into next Page
-const formBtn = document.getElementById('submit-btn');
-form.addEventListener('submit', passedValue);
+//Passing selected text from dropdown into next Page
 
-let selectedVal;
+
+
 function passedValue(){
-     selectedVal =  document.getElementById('dropdown').value;
+      const selectedVal =  document.getElementById('dropdown').value;
 
     console.log(selectedVal);
     localStorage.setItem('dropdownValue', selectedVal);
-
-   
-    
-}
-
-formBtn.addEventListener('click', userRedirect)
-
-function userRedirect(e){
-    e.preventDefault();
-     const selectedValue =  document.getElementById('dropdown').value;
-     //selectedVal = document.getElementById('dropdown').value;
-    // console.log(selectedVal);
-
-    if(selectedValue === 'Technology'){
+    if(selectedVal === 'technology'){
         window.location.href ='index_tech.html'
     }else{
         window.location.href ='index_maths.html'
     }
-      
+   
+    
 }
-userRedirect();
- 
-// function useRedirect(){
+
+
 
 
 

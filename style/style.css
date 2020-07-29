@@ -12,6 +12,10 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url("../images/quiz.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
     /* vertically centered  */
     min-height: 100vh; 
 }
@@ -22,6 +26,8 @@ body{
     animation-fill-mode: forwards;
     position: relative;
     
+    font-weight: 1000;
+    
 }
 @keyframes title{
     0%{
@@ -30,6 +36,9 @@ body{
     100%{
         top: 0;
     }
+}
+h2{
+    color: #2ee61d;
 }
 .container{
     background: #fff;
